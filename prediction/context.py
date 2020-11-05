@@ -2,6 +2,8 @@ import os
 
 import joblib
 
+from cars_from_auction import settings
+
 
 class Context:
     def __init__(self):
@@ -11,9 +13,7 @@ class Context:
     def get_model(self):
         if self._model is None:
             model_path = 'models/'
-            models = os.listdir(model_path)
-            models.sort()
-            model_name = models[-1]
+            model_name = settings.MODEL
             model_file = f'{model_name}'
 
             reg = joblib.load(model_path + model_file)

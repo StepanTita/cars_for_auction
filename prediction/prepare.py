@@ -41,4 +41,8 @@ def prepare_data(data):
     new_data = data
     for t in transformers:
         new_data = t(new_data)
+
+    for c in new_data.select_dtypes(include='object'):
+        new_data[c] = new_data[c].astype('category')
+
     return new_data

@@ -24,7 +24,7 @@ SECRET_KEY = '26xurpg(9_*6eqks^mf=s0b^z6f=o4y=er)6e$3be(7#*_zbyl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*', '0.0.0.0']
 
 # Application definition
 
@@ -115,3 +115,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+VERSION = 1.0
+
+MODEL = 'lgbm-v1-2020-11-04_23:50:05.622519.model'
