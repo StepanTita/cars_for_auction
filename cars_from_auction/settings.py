@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '26xurpg(9_*6eqks^mf=s0b^z6f=o4y=er)6e$3be(7#*_zbyl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*', '0.0.0.0']
 
@@ -119,3 +120,5 @@ STATIC_URL = '/static/'
 VERSION = 1.0
 
 MODEL = 'lgbm-v1-2020-11-04_23:50:05.622519.model'
+
+django_heroku.settings(locals())
